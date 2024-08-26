@@ -1,0 +1,17 @@
+#!bin/bash
+sudo apt update
+sudo apt install -y nginx certbot
+
+sudo curl -fsSL https://get.docker.com | bash
+sudo curl -SL https://github.com/docker/compose/releases/download/v2.29.1/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo usermod -aG docker ubuntu
+
+# certbot certonly --manual --preferred-challenges dns -d example.com
+
+##### fzf install #####
+# git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+# ~/.fzf/install
+
+##### pull code docker-compose ######
+# cd ~ && mkdir docker && git clone https://git-registry/demom2-docker-environment.git environment/
